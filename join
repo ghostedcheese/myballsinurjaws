@@ -77,7 +77,7 @@ spawn(function()
 									EquipTroop(v)
 								end
 								prints("Joined elavator...")
-								getgenv().status = "Joined"
+								getgenv().status = "Joined" .. mp.Value
 								while wait() do
 									getgenv().status = "Joined ("..Elevators.State.Timer.Value.."s)"
 									if Elevators.State.Timer.Value == 0 then
