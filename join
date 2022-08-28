@@ -79,13 +79,13 @@ spawn(function()
 								prints("Joined elavator...")
 								getgenv().status = "Joined" .. mp.Value
 								while wait() do
-									getgenv().status = "Joined ("..Elevators.State.Timer.Value.."s)"
+									getgenv().status = "Joined " .. mp.Value .. " ("..Elevators.State.Timer.Value.."s)"
 									if Elevators.State.Timer.Value == 0 then
 										local s = true
 										for c=1,100 do
 										if (plrs.Value > 2) then
 											prints("More than 2 people in elevator, leaving elevator...")
-											getgenv().status = "Someone else other than duck_1 joined..."
+											getgenv().status = "Someone else other than duck_2 joined..."
 											RSRF:InvokeServer("Elevators","Leave")
 											getgenv().repeating = true
 											s = false
@@ -109,7 +109,7 @@ spawn(function()
 											if (plrs.Value > 2) then
 												RSRF:InvokeServer("Elevators","Leave")
 												prints("More than 2 people in elevator, leaving elevator...")
-												getgenv().status = "Someone else other than duck_1 joined..."
+												getgenv().status = "Someone else other than duck_2 joined..."
 												getgenv().repeating = true
 												break
 											elseif (plrs.Value == 0) then
